@@ -6,7 +6,7 @@ Bringing [shadcn/ui](https://ui.shadcn.com) to React Native. Beautifully crafted
 
 ## Documentation
 
-Visit https://reactnativereusables.com/docs to view the documentation.
+Visit https://rnr-registry-template-docs.vercel.app/ to view the documentation.
 
 ## Community Resources
 
@@ -19,9 +19,3 @@ Please read the [contributing guide](/CONTRIBUTING.md).
 ## License
 
 Licensed under the [MIT license](/LICENSE).
-
-<br />
-<br />
-<a href="https://vercel.com/oss">
-  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
-</a>

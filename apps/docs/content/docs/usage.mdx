@@ -12,19 +12,22 @@ description: How to use the React Native Reusables Registry Template
 ## Updating the docs
 
 <Callout>
-**Notes: ** When changing the `packages/example-library` folder name, you need to update the following files too from:
+  **Notes: ** When changing the `packages/example-library` folder name, you need to update the
+  following files too from:
 </Callout>
 
 ### Docs
+
 - `apps/docs/components/examples.tsx` to update the components
 - `apps/docs/components/blocks.tsx` to update the blocks
 - `apps/docs/components/blocks-grid.tsx` to update the blocks menu
+- `apps/docs/components/preview-card.tsx` to update the QR code link
 - `apps/docs/lib/file-generator.ts` to update the import paths in the code blocks
 - `apps/docs/registry.json` to update the registry
 - `apps/docs/tsconfig.json` to update the paths
 - `apps/docs/package.json` to install the package as a dependency
 - `apps/docs/next.config.mjs` to update the paths
-  
+
 ### Showcase app
 
 - `apps/showcase/app/components/*` add your components here
@@ -43,5 +46,6 @@ description: How to use the React Native Reusables Registry Template
 - `packages/example-library/src/blocks/*` to update the examples blocks
 
 <Callout>
-**Notes: ** If you want to use more `react-native-reusables` components you can install them through the [CLI](https://reactnativereusables.com/docs/cli) inside `packages/your-library`
+  **Notes: ** If you want to use more `react-native-reusables` components you can install them
+  through the [CLI](https://reactnativereusables.com/docs/cli) inside `packages/your-library`
 </Callout>

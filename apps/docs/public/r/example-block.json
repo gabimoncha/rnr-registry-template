@@ -7,7 +7,8 @@
   "description": "Displays a set of buttons which are always red.",
   "registryDependencies": [
     "https://reactnativereusables.com/r/new-york/text.json",
-    "https://reactnativereusables.com/r/new-york/button.json"
+    "https://reactnativereusables.com/r/new-york/button.json",
+    "https://reactnativereusables.com/r/new-york/card.json"
   ],
   "files": [
     {

@@ -21,9 +21,6 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
       toc={page.data.toc}
       full={page.data.full}
       breadcrumb={{ enabled: false }}
-      tableOfContent={{
-        footer: shouldShowTableOfContentFooter(page.data.title) ? <TableOfContentFooter /> : null,
-      }}
       footer={{
         component: <Footer url={page.url} />,
       }}>
@@ -160,32 +157,6 @@ function Footer({ url }: { url: string }) {
       </div>
     </footer>
   );
-}
-
-function TableOfContentFooter() {
-  return (
-    <div className="bg-card dark:bg-fd-muted border-border/70 dark:border-border/0 text-fd-foreground/80 group relative mt-12 flex flex-col gap-2 rounded-lg border p-6 text-sm">
-      <div className="text-balance text-base font-semibold leading-tight group-hover:underline">
-        Want to work with us?
-      </div>
-      <div className="">Mention us to your team.</div>
-      <div className="text-muted-foreground pb-2">We help companies ship world-class UI/UX.</div>
-      <Button
-        size="sm"
-        className="from-primary to-primary/75 group-hover:to-primary/80 w-fit bg-transparent bg-gradient-to-br">
-        Learn more
-      </Button>
-      <Link href="/docs/hire-us" className="absolute inset-0">
-        <span className="sr-only">Learn more about Founded Labs</span>
-      </Link>
-    </div>
-  );
-}
-
-const PAGE_TITLES_TO_NOT_SHOW_FOOTER = ['Installation', 'Hire us'];
-
-function shouldShowTableOfContentFooter(title: string) {
-  return !PAGE_TITLES_TO_NOT_SHOW_FOOTER.includes(title);
 }
 
 export async function generateStaticParams() {

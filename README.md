@@ -22,10 +22,6 @@ Visit https://rnr-registry-template-docs.vercel.app/ to view the documentation.
 
 See the [community resources](./COMMUNITY_RESOURCES.md) for community-maintained components, libraries, and templates.
 
-## Contributing
-
-Please read the [contributing guide](/CONTRIBUTING.md).
-
 ## License
 
 Licensed under the [MIT license](/LICENSE).

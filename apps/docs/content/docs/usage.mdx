@@ -1,0 +1,47 @@
+---
+title: Usage
+description: How to use the React Native Reusables Registry Template
+---
+
+## Using the template
+
+- The example components are found in the `packages/example-library` folder.
+- The template includes the necessary config to use [react-native-reusables](https://reactnativereusables.com) components as dependencies.
+- The Reusables UI are installed in `packages/example-library/reusables`.
+
+## Updating the docs
+
+<Callout>
+**Notes: ** When changing the `packages/example-library` folder name, you need to update the following files too from:
+</Callout>
+
+### Docs
+- `apps/docs/components/examples.tsx` to update the components
+- `apps/docs/components/blocks.tsx` to update the blocks
+- `apps/docs/components/blocks-grid.tsx` to update the blocks menu
+- `apps/docs/lib/file-generator.ts` to update the import paths in the code blocks
+- `apps/docs/registry.json` to update the registry
+- `apps/docs/tsconfig.json` to update the paths
+- `apps/docs/package.json` to install the package as a dependency
+- `apps/docs/next.config.mjs` to update the paths
+  
+### Showcase app
+
+- `apps/showcase/app/components/*` add your components here
+- `apps/showcase/lib/constants.ts` to add your components to the list
+- `apps/showcase/app.config.ts` to update the app config
+- `apps/showcase/content/docs/meta.json`
+- `apps/showcase/registry.json` for updating the registry
+- `apps/showcase/tsconfig.json` for updating the paths
+- `apps/showcase/package.json` to install the package as a dependency
+
+### Component Library
+
+- `packages/example-library/package.json` to update the package name
+- `packages/example-library/src/components/ui/*` to create your components
+- `packages/example-library/src/examples/*` to update the example components
+- `packages/example-library/src/blocks/*` to update the examples blocks
+
+<Callout>
+**Notes: ** If you want to use more `react-native-reusables` components you can install them through the [CLI](https://reactnativereusables.com/docs/cli) inside `packages/your-library`
+</Callout>

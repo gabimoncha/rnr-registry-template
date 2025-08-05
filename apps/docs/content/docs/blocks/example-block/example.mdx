@@ -3,17 +3,12 @@ title: Multiple Buttons
 description: An example block to help you get started.
 ---
 
-import { BlockPreviewCard } from '@docs/components/preview-card';
-import { CommandTabs } from '@docs/components/command-tabs';
-import { ExternalLinks } from '@docs/components/external-links';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@docs/components/ui/tabs';
 import { MultipleButtons } from '@docs/components/blocks';
-import { Step, Steps } from 'fumadocs-ui/components/steps';
-
-{/* TODO(gabimoncha): add link to rnr button new docs */}
 
 <ExternalLinks
-  links={[{ title: 'Button Docs', url: 'https://reactnativereusables.com/components/button/' }]}
+  links={[
+    { title: 'Button Docs', url: 'https://reactnativereusables.com/docs/components/button/' },
+  ]}
 />
 
 <div className="h-5" />
@@ -38,7 +33,7 @@ import { Step, Steps } from 'fumadocs-ui/components/steps';
     <TabsTrigger id="manual" value="manual">Manual</TabsTrigger>
   </TabsList>
   <TabsContent value="cli">
-     <CommandTabs args={["add", "https://rnr-registry-template-docs.vercel.app/r/example-block.json"]}/>
+    <CommandTabs args={["add", "https://rnr-registry-template-docs.vercel.app/r/example-block.json"]}/>
   </TabsContent>
   <TabsContent value="manual">
     <Steps> 
@@ -89,8 +84,6 @@ import { Step, Steps } from 'fumadocs-ui/components/steps';
 
 ```tsx
 import { MultipleButtons } from '@/components/multiple-buttons';
-```
 
-```tsx
-<MultipleButtons />
+<MultipleButtons />;
 ```

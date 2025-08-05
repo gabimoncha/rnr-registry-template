@@ -1,9 +1,7 @@
 import { Button } from '@docs/components/ui/button';
 import { source } from '@docs/lib/source';
-import { cn } from '@docs/lib/utils';
+import mdxComponents from '@docs/mdx-components';
 import { findNeighbour } from 'fumadocs-core/server';
-import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/page';
 import { ArrowLeftIcon, ArrowRightIcon } from 'lucide-react';
 import Link from 'next/link';
@@ -14,45 +12,24 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
-  const MDX = page.data.body;
+  const doc = page.data;
+  const MDX = doc.body;
 
   return (
     <DocsPage
-      toc={page.data.toc}
-      full={page.data.full}
+      toc={doc.toc}
+      full={doc.full}
       breadcrumb={{ enabled: false }}
       footer={{
         component: <Footer url={page.url} />,
       }}>
       <DocsBody>
         <div className="flex items-center justify-between gap-2">
-          <DocsTitle className="mb-0 font-semibold">{page.data.title}</DocsTitle>
+          <DocsTitle className="mb-0 font-semibold">{doc.title}</DocsTitle>
           <NeighbourButtons url={page.url} />
         </div>
-        <DocsDescription className="mb-4 mt-2.5 text-base">{page.data.description}</DocsDescription>
-        <MDX
-          components={{
-            ...defaultMdxComponents,
-            h2: ({ className, ...props }) => (
-              <defaultMdxComponents.h2 className={cn(className, 'font-medium')} {...props} />
-            ),
-            //  HTML `ref` attribute conflicts with `forwardRef`
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
-            pre: ({ ref: _ref, className, ...props }) => (
-              <CodeBlock
-                {...props}
-                className={cn(
-                  className,
-                  'bg-fd-foreground/95 dark:bg-fd-secondary/50 text-background dark:text-foreground *:dark relative'
-                )}>
-                <Pre>{props.children}</Pre>
-              </CodeBlock>
-            ),
-            h3: ({ className, ...props }) => (
-              <h3 className={cn(className, 'mb-6 mt-10 scroll-mt-20 font-medium')} {...props} />
-            ),
-          }}
-        />
+        <DocsDescription className="mb-4 mt-2.5 text-base">{doc.description}</DocsDescription>
+        <MDX components={mdxComponents} />
       </DocsBody>
     </DocsPage>
   );

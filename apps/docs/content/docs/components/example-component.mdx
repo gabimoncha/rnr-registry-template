@@ -3,17 +3,12 @@ title: Example component
 description: An example component to help you get started.
 ---
 
-import { CommandTabs } from '@docs/components/command-tabs';
-import { ExternalLinks } from '@docs/components/external-links';
-import { PreviewCard } from '@docs/components/preview-card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@docs/components/ui/tabs';
 import { RedButtonPreview, RedButtonSecondaryPreview } from '@docs/components/examples';
-import { Step, Steps } from 'fumadocs-ui/components/steps';
-
-{/* TODO(gabimoncha): add link to rnr button new docs */}
 
 <ExternalLinks
-  links={[{ title: 'Button Docs', url: 'https://reactnativereusables.com/components/button/' }]}
+  links={[
+    { title: 'Button Docs', url: 'https://reactnativereusables.com/docs/components/button/' },
+  ]}
 />
 
 <div className="h-5" />
@@ -57,9 +52,7 @@ import { Step, Steps } from 'fumadocs-ui/components/steps';
  
         **Install the following dependencies:**
 
-        ```
-        npx expo install @rn-primitives/slot
-        ```
+        <BashCommand command={`npx expo install @rn-primitives/slot`} />
 
       </Step>
       <Step>
@@ -111,8 +104,6 @@ import { Step, Steps } from 'fumadocs-ui/components/steps';
 
 ```tsx
 import { RedButton } from '@/components/ui/red-button';
-```
 
-```tsx
-<RedButton label="Red Button" />
+<RedButton label="Red Button" />;
 ```

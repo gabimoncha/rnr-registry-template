@@ -25,3 +25,7 @@ See the [community resources](./COMMUNITY_RESOURCES.md) for community-maintained
 ## License
 
 Licensed under the [MIT license](/LICENSE).
+
+## Credits
+
+- [react-native-reusables](https://reactnativereusables.com) for the inspiration and the template.
